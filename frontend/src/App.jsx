@@ -18,7 +18,7 @@ const App = () => {
   }, [region, errorCount, seed, page]);
 
   const fetchData = async () => {
-    const response = await axios.get(`http://localhost:5000/api/data`, {
+    const response = await axios.get(`${import.meta.env}/data`, {
       params: { region, errors: errorCount, seed: seed + page }
     });
     if (response.data.length < 20) setHasMore(false);
