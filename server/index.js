@@ -25,7 +25,10 @@ app.get('/api/export', (req, res) => {
   res.send(csv);
 });
 
-
+// Test route
+app.get("/", (req, res) => {
+    res.json("Hello");
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
