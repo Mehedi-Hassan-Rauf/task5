@@ -18,7 +18,7 @@ const App = () => {
   }, [region, errorCount, seed, page]);
 
   const fetchData = async () => {
-    const response = await axios.get(`${import.meta.env}/data`, {
+    const response = await axios.get(`https://task5-server-i1d5.onrender.com/api/data`, {
       params: { region, errors: errorCount, seed: seed + page }
     });
     if (response.data.length < 20) setHasMore(false);
